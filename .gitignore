@@ -14,3 +14,6 @@ slackbot_test_settings.py
 /*.egg-info
 .cache
 /.vscode/
+
+# you should add this to your code with the appropriate tokens inside
+slackbot/authentication.py

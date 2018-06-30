@@ -2,15 +2,16 @@
 
 import os
 
+from slackbot.authentication import SLACK_API_TOKEN as API_TOKEN
+
 DEBUG = False
 
 PLUGINS = [
     'slackbot.plugins',
 ]
 
-ERRORS_TO = None
+ERRORS_TO = 'david'
 
-# API_TOKEN = '###token###'
 
 '''
 Setup a comma delimited list of aliases that the bot will respond to.
@@ -34,7 +35,8 @@ effect.
 # BOT_EMOJI = ':godmode:'
 
 '''Specify a different reply when the bot is messaged with no matching cmd'''
-DEFAULT_REPLY = None
+DEFAULT_REPLY = ("Alexander the Great came to see Diogenes, and asked Diogenes if there was anything he could do to "
+                 "honor him. Diogenes replied, 'Yes, stand out of the way of my sunshine.'")
 
 for key in os.environ:
     if key[:9] == 'SLACKBOT_':
