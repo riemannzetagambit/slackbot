@@ -6,7 +6,6 @@ from imgurpython import ImgurClient
 
 from slackbot.authentication import IMGUR_CLIENT_ID, IMGUR_CLIENT_SECRET, IMGUR_REFRESH_TOKEN
 from slackbot.bot import respond_to
-from slackbot.utils import download_file, create_tmp_file
 
 # needed to request images
 client = ImgurClient(client_id=IMGUR_CLIENT_ID, client_secret=IMGUR_CLIENT_SECRET, refresh_token=IMGUR_REFRESH_TOKEN)
@@ -22,6 +21,7 @@ def show_image(message, image_query):
     items = client.gallery_search(q='', advanced={'q_type': image_type, 'q_all': image_query})
     # clear out non-image stuff
     items = [item for item in items if item.link.endswith('.{}'.format(image_type.replace('ani', '')))]
+    # randomize what you see
     item = choice(items)
     message.reply(item.link)
 
@@ -34,6 +34,7 @@ def show_image_bomb(message, image_query, num_images):
     else:
         # make default gif
         image_type = 'anigif'
+
     items = client.gallery_search(q='', advanced={'q_type': image_type, 'q_all': image_query})
     # clear out non-image stuff
     items = [item for item in items if item.link.endswith('.{}'.format(image_type.replace('ani', '')))]
