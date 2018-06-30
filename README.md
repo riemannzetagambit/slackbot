@@ -20,7 +20,7 @@ IMGUR_REFRESH_TOKEN = '**************'
 ```
 You'll have to get the tokens for all these APIs yourself.
 
-*Do not commit this file to your repo*. Note that it is included in the 
+*Do not commit this file to your repo*. Note that it is included in the `.gitignore` for this reason.
 
 ## Customizations from the original repo
 
