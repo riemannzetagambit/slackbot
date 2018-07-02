@@ -57,3 +57,8 @@ def hello_unicode_message(message):
 @listen_to('start a thread')
 def start_thread(message):
     message.reply('I started a thread', in_thread=True)
+
+
+@respond_to(r'^\<?(\w*)\>? you.*$')
+def respond_you_too(message, insult):
+    message.reply('{} you, too.'.format(insult))

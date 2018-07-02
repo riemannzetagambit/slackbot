@@ -39,6 +39,6 @@ def show_image_bomb(message, image_query, num_images):
     # clear out non-image stuff
     items = [item for item in items if item.link.endswith('.{}'.format(image_type.replace('ani', '')))]
     # randomize what you see
-    items = sample(items, num_images)
+    items = sample(items, min(len(items), num_images))
     for item in items:
         message.reply(item.link)

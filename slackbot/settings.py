@@ -2,7 +2,7 @@
 
 import os
 
-from slackbot.authentication import SLACK_API_TOKEN as API_TOKEN
+from slackbot.authentication import SLACK_BOT_API_TOKEN as API_TOKEN
 
 DEBUG = False
 

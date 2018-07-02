@@ -17,3 +17,6 @@ slackbot_test_settings.py
 
 # you should add this to your code with the appropriate tokens inside
 slackbot/authentication.py
+
+# don't track the ipynb checkpoints
+.ipynb_checkpoints/
